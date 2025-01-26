@@ -1,4 +1,4 @@
-import Link from 'next/link'
+// import Link from 'next/link'
 
 export default function Links() {
   return (
@@ -26,7 +26,7 @@ export default function Links() {
             <h2 className="text-xl font-semibold mb-3">Benign Keratosis</h2>
             <p className="text-gray-600">
             <strong>Description:</strong> Benign Keratosis, also known as Seborrheic Keratosis, is a non-cancerous skin growth that appears as a wart-like, waxy, 
-            or "stuck-on" lesion. They can be tan, brown, or black and often occur in older adults. <br/>
+            or stuck-on lesion. They can be tan, brown, or black and often occur in older adults. <br/>
             <strong>Benign or Malignant:</strong> Benign. <br/>
               More information can be found at this link: <a 
                 href="https://www.mayoclinic.org/diseases-conditions/seborrheic-keratosis/symptoms-causes/syc-20353878" 

@@ -2,11 +2,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-interface FormData {
-  image: File | null;
-  // add other properties as needed
-}
-
 export default function Identify() {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [predictions, setPredictions] = useState<any[]>([]);
