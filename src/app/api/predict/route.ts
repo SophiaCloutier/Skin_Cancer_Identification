@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     const tempDataPath = path.join(process.cwd(), 'temp_data.json');
     writeFileSync(tempDataPath, JSON.stringify({ image }));
 
-    return new Promise((resolve) => {
+    return await new Promise<Response>((resolve) => {
       // Call Python script with the temp file path as an argument
       const pythonProcess = spawn('python', [
         path.join(process.cwd(), 'src/app/identification/identify.py'),
