@@ -2,9 +2,15 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
+// Add this interface at the top of the file
+interface Prediction {
+  diagnosis: string;
+  // Add any other properties that come back from your API
+}
+
 export default function Identify() {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
-  const [predictions, setPredictions] = useState<any[]>([]);
+  const [predictions, setPredictions] = useState<Prediction[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
