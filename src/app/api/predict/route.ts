@@ -36,7 +36,7 @@ export async function POST(request: Request) {
           try {
             const predictions = JSON.parse(result);
             resolve(NextResponse.json({ predictions }));
-          } catch (e) {
+          } catch {
             resolve(NextResponse.json({ error: 'Invalid response from prediction' }, { status: 500 }));
           }
         }

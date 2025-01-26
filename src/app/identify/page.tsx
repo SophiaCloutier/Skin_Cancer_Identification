@@ -1,5 +1,11 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
+
+interface FormData {
+  image: File | null;
+  // add other properties as needed
+}
 
 export default function Identify() {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
@@ -73,10 +79,12 @@ export default function Identify() {
           >
             {previewUrl ? (
               <div className="flex flex-col items-center">
-                <img 
+                <Image 
                   src={previewUrl} 
                   alt="Preview" 
                   className="max-h-64 max-w-full mb-4 rounded-lg"
+                  width={500}
+                  height={300}
                 />
                 <p className="text-sm text-gray-500">Click to replace image</p>
               </div>
