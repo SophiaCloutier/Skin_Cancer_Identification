@@ -25,8 +25,25 @@ export default function Disclaimers() {
           <div className="p-6 border rounded-lg shadow-md">
             <h2 className="text-xl font-semibold mb-3">Privacy Notice</h2>
             <p className="text-gray-600">
-              Images uploaded to our service are processed securely and not stored permanently. 
-              We recommend not sharing sensitive personal information through this platform.
+              Images uploaded to our service are processed securely and not stored permanently.
+              Images are deleted immediately after processing. 
+              However, we recommend not sharing sensitive personally identifiable information through this platform.
+            </p>
+          </div>
+
+          <div className="p-6 border rounded-lg shadow-md">
+            <h2 className="text-xl font-semibold mb-3">Public Dataset</h2>
+            <p className="text-gray-600">
+              This model was trained on publicly available datasets.
+              Skin Cancer MNIST: HAM10000 is a large collection of multi-source dermatoscopic images of pigmented lesions
+              found at this link: <a 
+                href="https://challenge.isic-archive.com/data/" 
+                className="text-blue-600 hover:text-blue-800 underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ISIC Challenge Dataset
+              </a>
             </p>
           </div>
         </div>

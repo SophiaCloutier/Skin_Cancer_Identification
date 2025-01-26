@@ -54,7 +54,9 @@ export default function Identify() {
         
         <p className="text-lg text-gray-600 text-center mb-6">
           Upload a clear, well-lit photo of your mole or skin lesion. 
-          The image should be focused and show the area clearly.
+          The image should be focused and show the area clearly. Please note that 
+          predictions take a moment to process, once you have clicked identify allow a
+          moment for the results to appear.
         </p>
 
         <div className="w-full p-8 border-2 border-dashed rounded-lg text-center">
@@ -100,12 +102,11 @@ export default function Identify() {
 
         {predictions.length > 0 && (
           <div className="w-full mt-4 p-6 border rounded-lg bg-white shadow-md">
-            <h2 className="text-2xl font-semibold mb-4">Analysis Results:</h2>
+            <h2 className="text-2xl font-semibold mb-4">Three Most Likely Diagnoses:</h2>
             {predictions.map((pred, index) => (
               <div key={index} className="mb-3 p-3 border rounded-lg bg-gray-50">
                 <p className="text-lg">
-                  <span className="font-medium">{pred.diagnosis}:</span>{' '}
-                  <span className="text-blue-600">{pred.confidence.toFixed(2)}%</span>
+                  <span className="font-medium">{pred.diagnosis}</span>
                 </p>
               </div>
             ))}
